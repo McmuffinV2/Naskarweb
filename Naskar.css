@@ -58,7 +58,7 @@ body {
     /* compatibilidad Safari */
     padding: 2rem;
     border-radius: 16px;
-    color: #111;
+    color: #000000;
 }
 
 .logo {
@@ -92,7 +92,7 @@ body {
     margin: 20px auto;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgb(161, 147, 147);
 }
 
 @media (min-width: 768px) {
@@ -108,8 +108,8 @@ body {
     height: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    background: #000;
-    /* Deep black for better photo focus */
+    background: #fff;
+    /* Changed to white for a cleaner look */
     display: flex;
     align-items: center;
     justify-content: center;
