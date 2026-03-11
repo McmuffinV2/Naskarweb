@@ -1,0 +1,336 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+
+}
+
+.headbar {
+    position: fixed;
+    /* siempre visible arriba */
+
+    top: 0;
+    left: 0;
+    width: 97%;
+    /* ocupa todo el ancho */
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* color de fondo */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+
+    /* se mantiene soobre otros elementos */
+}
+
+.headbar nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.headbar nav a:hover {
+    text-decoration: underline;
+}
+
+.contenido {
+    margin-top: 80px;
+    /* espacio para que no se tape el contenido */
+    padding: 20px;
+}
+
+
+/* Tarjeta con efecto vidrio */
+.card-blur {
+    background: rgba(255, 255, 255, 0.25);
+    /* transparencia para ver el fondo */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* compatibilidad Safari */
+    padding: 2rem;
+    border-radius: 16px;
+    color: #111;
+}
+
+.logo {
+    font-size: 1px;
+    font-weight: 1px;
+    background-image: url("img/Logonaskarremaster.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.custom {
+    display: inline-block;
+    border: 0.10em solid black;
+    border-radius: 1em;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 1em 2.5em;
+    text-align: center;
+    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.carrusel {
+    position: relative;
+    width: 90vw;
+    height: 80vh;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.custom:hover {
+    color: black;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.5)0 10PX 20px;
+    transform: translateY(-2px);
+}
+
+.custom:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.video-clean {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Llena el contenedor, puede recortar bordes */
+    display: block;
+}
+
+
+/* Este truco hace que el mapa sea responsivo */
+.map-container {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    /* Relación de aspecto 16:9 */
+    position: relative;
+    height: 0;
+    max-width: 100%;
+    border-radius: 15px;
+    /* Bordes redondeados para estética */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.btn-soft {
+    padding: 12px 25px;
+    background-color: #f8f9fa;
+    border: none;
+    color: #555;
+    border-radius: 50px;
+    /* Estilo píldora */
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-soft:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+
+/* Imagen específica para Maps */
+.maps {
+    background-image: url('img/googlemaps.png');
+
+}
+
+/* Imagen específica para Waze */
+.waze {
+    background-image: url('img/waze.png');
+}
+
+.btn-bg {
+    /* Estilos base del botón */
+    padding: 12px 20px 12px 45px;
+    /* Más espacio a la izquierda para el logo */
+    border-radius: 50px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    /* Configuración común del fondo */
+    background-repeat: no-repeat;
+    background-size: 20px;
+    /* Tamaño del logo */
+    background-position: 15px center;
+    /* 15px desde la izquierda, centrado vertical */
+}
+
+.btn-bg:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Tarjeta Minimalista de Información */
+.info-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.info-text {
+    text-align: left;
+}
+
+.info-text h2 {
+    font-size: 2.2em;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+.info-text p {
+    color: #444;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.tutorial-llegada h2 {
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.tutorial-llegada p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.botones-mapa {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+/* Responsive Grid a 1 columna */
+@media (max-width: 850px) {
+    .info-card {
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+        gap: 40px;
+    }
+
+    .info-text {
+        text-align: center;
+    }
+}
+
+/*Api de whatsapp de contacto*/
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(37, 211, 102, 0.6);
+    /* coor oficial de WhatsApp */
+    padding: 12px 20px 12px 45px;
+    border: none;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background: rgba(37, 211, 102, 0.8);
+}
+
+.btn-whatsapp .icon {
+
+    width: 20px;
+    /* tamaño del ícono */
+    height: 20px;
+    margin-right: 20px;
+    /* espacio entre ícono y texto */
+}
+
+
+
+
+
+
+/*Animaciones minimalistas on scroll*/
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
