@@ -108,7 +108,8 @@ body {
     height: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    background: #111; /* Dark background for contained images */
+    background: #111;
+    /* Dark background for contained images */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,7 +118,8 @@ body {
 .slide img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Show full image without cropping */
+    object-fit: contain;
+    /* Show full image without cropping */
 }
 
 .info {
