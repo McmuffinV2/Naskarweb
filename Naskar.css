@@ -87,9 +87,9 @@ body {
 .carrusel {
     position: relative;
     width: 95vw;
-    height: 60vh;
-    /* Reduced from 80vh for better initial view */
-    margin: 30px auto;
+    height: 75vh;
+    /* Increased from 60vh for vertical mobile photos */
+    margin: 20px auto;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -108,8 +108,8 @@ body {
     height: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    background: #111;
-    /* Dark background for contained images */
+    background: #000;
+    /* Deep black for better photo focus */
     display: flex;
     align-items: center;
     justify-content: center;
