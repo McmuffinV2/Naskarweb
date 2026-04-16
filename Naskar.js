@@ -1,48 +1,52 @@
-// Animaciones minimalistas al hacer scroll (Intersection Observer)
+// Naskar.js - Minimalist & Interactive Logic
+
 document.addEventListener("DOMContentLoaded", function () {
+
+    // 1. Scroll Reveal Animations (Intersection Observer)
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.15 // El elemento se animará cuando el 15% sea visible
+        threshold: 0.15
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target); // Solo animar la primera vez
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observar todos los elementos que tengan la clase fade-in-up
-    document.querySelectorAll('.fade-in-up').forEach((el) => {
+    // Observe all elements with 'reveal' class
+    document.querySelectorAll('.reveal').forEach((el) => {
         observer.observe(el);
+    });
+
+    // 2. Smooth Scrolling for Navigation Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80, // Offset for the fixed header
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 });
 
-let index = 0;
-const slides = document.querySelectorAll(".slide");
-
-function cambiarSlide() {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length; // avanza y reinicia al final
-    slides[index].classList.add("active");
-}
-
-setInterval(cambiarSlide, 3000); // cambia cada 3 segundos
-
+// 3. Map Functions
 function abrirMaps() {
-    // Reemplaza con tu dirección real o coordenadas
+    // Taller Naskar location
     window.open("https://maps.app.goo.gl/jKF6hsTd9xk7dtDB6", "_blank");
 }
 
 function abrirWaze() {
-    // Reemplaza con tu dirección o coordenadas
-    window.open("https://waze.com/ul?q=TU_DIRECCION_AQUI&navigate=yes", "_blank");
+    // Taller Naskar location for Waze
+    window.open("https://waze.com/ul?ll=23.2532495,-106.4307833&navigate=yes", "_blank");
 }
-
-
-
-
-

@@ -1,73 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naskar - Taller de Laminación y Pintura</title>
-    <script src="Naskar.js" defer></script>
+    <title>Naskar | Estética Automotriz</title>
+    <meta name="description"
+        content="Taller especializado en laminación, pintura y estética automotriz en general. Calidad premium y resultados garantizados.">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="Naskar.css">
 
+    <!-- Favicon (placeholder using logo) -->
+    <link rel="icon" type="image/png" href="img/Logonaskarremaster.png">
 </head>
 
 <body>
 
-
-    <div class="headbar card-blur logo">
-
-        <nav>
-
-            <a href=https://api.whatsapp.com/send?phone=5216692756955&text=%C2%A1Hola%20buenas%20tardes!%20Quisiera%20solicitar%20una%20cotizaci%C3%B3n%20para%20la%20reparacion%20y/o%20pintura%20de%20mi%20automovil.
-                target="_blank" class="custom btn-whatsapp">
-                <img src="img/pngwing.com.png" class="icon"></a>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="img/Logonaskarremaster.png" alt="Naskar Logo" class="logo-img">
+        </div>
+        <nav class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
         </nav>
-    </div>
+        <a href="https://api.whatsapp.com/send?phone=5216692756955&text=%C2%A1Hola!%20Quisiera%20solicitar%20una%20cotizaci%C3%B3n."
+            target="_blank" class="btn btn-primary" style="padding: 10px 25px; font-size: 0.8rem;">COTIZAR</a>
+    </header>
 
-    <div class="contenido">
-        <div class="carrusel">
-            <div class="slide active">
-                <div class="info">Servicio 1: Cambio de refacciones y reparacion de laminacion</div>
-                <img src="img/fotosdelvehiculo.png" alt="Servicio 1">
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="img/Carro.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <h1>NASKAR</h1>
+            <p>Especialistas en laminación y pintura automotriz. Transformamos tu vehículo con acabados de alta gama y
+                atención al detalle.</p>
+            <div class="hero-btns">
+                <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
             </div>
-            <div class="slide ">
-                <img src="img/Pintado.png" alt="Servicio 2">
-                <div class="info">Servicio 2: Pintado de piezas o completo y pulido de autos</div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios">
+        <h2 class="section-title reveal">Servicios Especializados</h2>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <h3>Laminación</h3>
+                <p>Reparación de golpes y abolladuras utilizando técnicas avanzadas para recuperar la forma original de
+                    tu auto.</p>
             </div>
-
+            <div class="service-card reveal">
+                <h3>Pintura</h3>
+                <p>Acabados espejo con cabina de pintura y materiales de alta calidad para una durabilidad excepcional.
+                </p>
+            </div>
+            <div class="service-card reveal">
+                <h3>Pulido y Estética</h3>
+                <p>Corrección de pintura y protección para que tu vehículo luzca como nuevo por más tiempo.</p>
+            </div>
         </div>
-    </div>
+    </section>
 
-
-    <div class="info-card fade-in-up">
-        <div class="info-text">
-            <h2>Sobre nosotros</h2>
-            <p>En el taller Naskar, nos dedicamos a ofrecer servicios de reparación y pintura automotriz de alta
-                calidad.
-                Con años de experiencia en el sector, nuestro equipo de expertos se compromete a brindar un servicio
-                excepcional y resultados impecables. Utilizamos las últimas técnicas y herramientas para garantizar que
-                tu
-                vehículo recupere su belleza original. Ya sea que necesites una reparación menor o una restauración
-                completa, en Naskar estamos aquí para ayudarte a mantener tu automóvil en las mejores condiciones.</p>
+    <!-- About Section -->
+    <section id="nosotros" style="background-color: var(--card-bg);">
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <h2>Sobre nosotros</h2>
+                <p>En el taller Naskar, nos dedicamos a ofrecer servicios de reparación y pintura automotriz de alta
+                    calidad. Con años de experiencia en el sector, nuestro equipo de expertos se compromete a brindar un
+                    servicio excepcional y resultados impecables.</p>
+                <p>Utilizamos las últimas técnicas y herramientas para garantizar que tu vehículo recupere su belleza
+                    original. Ya sea una reparación menor o una restauración completa, estamos aquí para ayudarte.</p>
+            </div>
+            <div class="about-img reveal">
+                <img src="img/antes.jpeg" alt="Restauración Naskar">
+            </div>
         </div>
+    </section>
 
-        <section class="tutorial-llegada">
-            <h2>¿Cómo llegar?</h2>
-            <p>Sigue el mapa para visitarnos en nuestro local:</p>
+    <!-- Portfolio Gallery -->
+    <section id="galeria">
+        <h2 class="section-title reveal">Resultados Reales</h2>
+        <div class="comparison-container">
+            <div class="comp-box reveal">
+                <img src="img/fotosdelvehiculo.png" alt="Antes y Después 1">
+                <span class="comp-label">PROYECTO 1</span>
+            </div>
+            <div class="comp-box reveal">
+                <img src="img/Pintado.png" alt="Antes y Después 2">
+                <span class="comp-label">PROYECTO 2</span>
+            </div>
+        </div>
+    </section>
 
-            <div class="map-container">
+    <!-- Maps & Contact -->
+    <section id="contacto">
+        <h2 class="section-title reveal">Contáctanos</h2>
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <div class="contact-item">
+                    <h3>WhatsApp Directo</h3>
+                    <p>+52 1 669 275 6955</p>
+                    <a href="https://api.whatsapp.com/send?phone=5216692756955" target="_blank" class="btn btn-primary"
+                        style="margin-top: 10px;">Enviar Mensaje</a>
+                </div>
+                <div class="contact-item">
+                    <h3>Contactos Adicionales</h3>
+                    <p><strong>Teléfono:</strong> (669) 123 4567</p>
+                    <p><strong>Email:</strong> contacto@tallernaskar.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Ubicación</h3>
+                    <p>Visita nuestro local siguiendo el mapa. Atendemos de Lunes a Sábados.</p>
+                    <div style="margin-top: 15px; display: flex; gap: 10px;">
+                        <button onclick="abrirMaps()" class="btn"
+                            style="background: #34a853; color: white; padding: 10px 20px;">Google Maps</button>
+                        <button onclick="abrirWaze()" class="btn"
+                            style="background: #33ccff; color: white; padding: 10px 20px;">Waze</button>
+                    </div>
+                </div>
+            </div>
+            <div class="map-wrapper reveal">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1089.8252765012514!2d-106.4307833421174!3d23.253249538524855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869f535055555555%3A0xdfef3dd1e9fb0b00!2sTALLER%20DE%20LAMINACION%20Y%20PINTURA%20EN%20GENERAL%20NASKAR.!5e0!3m2!1ses-419!2smx!4v1770569372797!5m2!1ses-419!2smx"
-                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
+        </div>
+    </section>
 
-            <div class="botones-mapa">
-                <button onclick="abrirMaps()" class="btn-soft btn-bg maps">Abrir en Google Maps</button>
-                <button onclick="abrirWaze()" class="btn-soft btn-bg waze">Abrir en Waze</button>
-            </div>
-        </section>
-    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 NASKAR Taller de Laminación y Pintura. Todos los derechos reservados.</p>
+    </footer>
 
+    <!-- Scripts -->
+    <script src="Naskar.js"></script>
+</body>
 
 </html>
